@@ -6,7 +6,7 @@ This dummy application was created because it is broadly representative of the t
 
 We will also ask some generic questions about how you might add a new feature or make a change to an existing feature.  You are welcome to spend as much or as little time with this code as you would like.  We believe the most useful amount of time to spend should be about 30 minutes -- enough to form some basic opinions and a basic strategy.
 
-Please be ready to report on your evaluation, highlighting the top 2-3 things done well, as well as the top 2-3 things needing improvement. 
+Please be ready to discuss your evaluation, highlighting the top few things done well, as well as the top few things needing improvement. 
 
 ---
 ## Ruby version 
