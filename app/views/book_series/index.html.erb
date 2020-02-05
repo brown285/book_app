@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Book Series</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Book count</th>
+    <th>Total Pages</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @book_series.each do |book_series| %>
+    <tr>
+      <td><%= book_series.title %></td>
+      <td><%= book_series.book_count %></td>
+      <td><%= book_series.books.map { |book| book.pages }.sum %></td>
+      <td><%= link_to 'Show', book_series %></td>
+      <td><%= link_to 'Edit', edit_book_series_path(book_series) %></td>
+      <td><%= link_to 'Destroy', book_series, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book Series', new_book_series_path %>

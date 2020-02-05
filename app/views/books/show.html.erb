@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author&.fullname %>
+</p>
+
+<p>
+  <strong>Pub year:</strong>
+  <%= @book.pub_year %>
+</p>
+
+<p>
+  <strong>Pages:</strong>
+  <%= @book.pages %>
+</p>
+
+<% if @book.book_series %>
+  <p>
+    <strong>Series:</strong>
+    <%= link_to @book&.book_series&.title, book_series_path(@book.book_series) %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Destroy', @book, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'All Books', books_path %>

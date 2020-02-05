@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+cd "$(dirname "$0")/.."
+
+# Add any config needs here
+
+gem install bundler
+bundle install
+bundle exec rails db:migrate db:seed

@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book_series.title %>
+</p>
+
+<p>
+  <strong>Total Books:</strong>
+  <%= @book_series.book_count %>
+</p>
+<p>
+  <strong>Total Pages:</strong>
+  <%= @book_series.total_pages %>
+</p>
+
+<p>
+  <strong>Books:</strong>
+  <% if @book_series.books.count == 0 %>
+  <div class="alert alert-warning"><%= @book_series.title %> doesn't have any books to display.</div>
+<% else %>
+  <table class="table" id="books">
+    <thead>
+    <tr>
+      <th>Book Title
+        <span data-toggle='tooltip' title='These books are members of the series'><i class='fa fa-question-circle'></i></span>
+      </th>
+      <th>Author</th>
+      <th>Publish Year</th>
+      <th>Pages</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @book_series.books.each do |book| %>
+      <tr>
+        <td>
+          <p><%= link_to book.title, book_path(book) %></p>
+        </td>
+        <td>
+          <p><%= link_to book.author.fullname, author_path(book.author) %></p>
+        </td>
+        <td>
+          <p><%= book.pub_year %></p>
+        </td>
+        <td>
+          <p><%= book.pages %></p>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_book_series_path(@book_series) %> |
+<%= link_to 'All Book Series', book_series_index_path %>

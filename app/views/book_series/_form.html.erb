@@ -1,0 +1,22 @@
+<%= form_with(model: book_series, local: true) do |form| %>
+  <% if book_series.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book_series.errors.count, "error") %> prohibited this book_series from being saved:</h2>
+
+      <ul>
+      <% book_series.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :book_series_title %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
