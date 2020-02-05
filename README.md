@@ -1,8 +1,12 @@
 # Book Application
+This application is a simple database for a book collection. It tracks books by author and collection (book series). From this, you can see how many books and pages a given author has written, as well as the size of a book series. 
 
-This is a simple Rails application to administer a library of books.
+## Purpose
+This dummy application was created because it is broadly representative of the technologies and general style of the application that the successful candidate will be coding.  Like this application, there are both good things and bad things about this code base.  Your task is not to fix anything or do anything specific to the code. Rather it is to form an opinion about what are some of the good things and what are some of the bad things you see here.  We will be asking you about these things, and will be very interested to understand your reasoning about why things are good or bad.  
 
-Please take the time to evaluate the strengths and weaknesses that you can see in the code base.
+We will also ask some generic questions about how you might add a new feature or make a change to an existing feature.  You are welcome to spend as much or as little time with this code as you would like.  We believe the most useful amount of time to spend should be about 30 minutes -- enough to form some basic opinions and a basic strategy.
+
+Please be ready to report on your evaluation, highlighting the top 2-3 things done well, as well as the top 2-3 things needing improvement. 
 
 ---
 ## Ruby version 
