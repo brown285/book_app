@@ -34,7 +34,7 @@ For development purposes, you can run a development server using:
 `./script/server`
 
 This server can be accessed at:
-[Book App](localhost:3000/)    
+[localhost:3000/](localhost:3000/)    
 
 ## Rails Console
 A convenience script has been supplied to run Rails Console at:
